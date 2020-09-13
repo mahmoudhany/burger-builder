@@ -27,13 +27,17 @@ class Orders extends Component {
   render() {
     return (
       <div>
-        {this.state.orders.map(order => {
-          return <Order
-            key={order.id}
-            ingredients={order.ingredients}
-            price={order.price}
-          />
-        })}
+        {
+          this.state.orders.length === 0 ?
+            <h1 style={{ textAlign: 'center' }}>No orders to show</h1>
+            :
+            this.state.orders.map(order => {
+              return <Order
+                key={order.id}
+                ingredients={order.ingredients}
+                price={order.price}
+              />
+            })}
       </div>
     );
   }
