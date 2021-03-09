@@ -29,7 +29,6 @@ const Input = (props) => {
           value={props.value}
           onChange={props.changed}
         >
-          <option value='deliveryMethod'>--Delivery Method</option>
           {
             props.elementConfig.options.map(option => (
               <option key={option.value} value={option.value}>{option.displayValue}</option>

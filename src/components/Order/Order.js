@@ -20,7 +20,7 @@ const Order = (props) => {
   return (
     <div className='Order'>
       <p>Ingredients: {ingredientOutput}</p>
-      <p>Price: <strong>USD {props.price}</strong></p>
+      <p>Price: <strong>{props.price} USD</strong></p>
     </div>
   );
 };
